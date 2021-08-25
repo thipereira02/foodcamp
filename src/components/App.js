@@ -5,6 +5,7 @@ import coca from "../assets/coquinha_gelada.png";
 import pudim from "../assets/pudim.png";
 
 import Header from "./Header";
+import Categories from "./Categories";
 
 export default function App(){
 	return (
@@ -37,113 +38,10 @@ export default function App(){
 
 			<Header />
 
-			<div className="menu">
-				<div className="secao">
-					<div className="titulo">Primeiro, seu prato</div>
-					<div className="opcoes pratos">
-						<div className="opcao prato-frango" onClick="selecionarPrato('.prato-frango', 'Frango Yin Yang', 14.90)">
-							<img src={frango} />
-							<div className="titulo">Frango Yin Yang</div>
-							<div className="descricao">Um pouco de batata, um pouco de salada</div>
-							<div className="preco">R$ 14,90</div>
-							<div className="check">
-								<ion-icon name="checkmark-circle"></ion-icon>
-							</div>
-						</div>
+			{products.map(p => (
+				<Categories key={p.id} categories={p}/>
+			))}
 
-						<div className="opcao prato-carne" onClick="selecionarPrato('.prato-carne', 'Carne Yin Yang', 17.90)">
-							<img src={frango} />
-							<div className="titulo">Carne Yin Yang</div>
-							<div className="descricao">Um pouco de batata, um pouco de salada</div>
-							<div className="preco">R$ 17,90</div>
-							<div className="check">
-								<ion-icon name="checkmark-circle"></ion-icon>
-							</div>
-						</div>
-
-						<div className="opcao prato-peixe" onClick="selecionarPrato('.prato-peixe', 'Peixe Yin Yang', 16.90)">
-							<img src={frango} />
-							<div className="titulo">Peixe Yin Yang</div>
-							<div className="descricao">Um pouco de batata, um pouco de salada</div>
-							<div className="preco">R$ 16,90</div>
-							<div className="check">
-								<ion-icon name="checkmark-circle"></ion-icon>
-							</div>
-						</div>
-					</div>
-				</div>
-
-				<div className="secao">
-					<div className="titulo">Agora, sua bebida</div>
-					<div className="opcoes bebidas">
-						<div className="opcao bebida-coca" onClick="selecionarBebida('.bebida-coca', 'Coquinha gelada', 6.90)">
-							<img src={coca} />
-							<div className="titulo">Coquinha gelada</div>
-							<div className="descricao">Lata 350ml</div>
-							<div className="preco">R$ 6,90</div>
-							<div className="check">
-								<ion-icon name="checkmark-circle"></ion-icon>
-							</div>
-						</div>
-
-						<div className="opcao bebida-guarana" onClick="selecionarBebida('.bebida-guarana', 'Guaraná gelado', 4.90)">
-							<img src={coca} />
-							<div className="titulo">Guaraná gelado</div>
-							<div className="descricao">Lata 350ml</div>
-							<div className="preco">R$ 4,90</div>
-							<div className="check">
-								<ion-icon name="checkmark-circle"></ion-icon>
-							</div>
-						</div>
-
-						<div className="opcao bebida-suco" onClick="selecionarBebida('.bebida-suco', 'Suquinho gelado', 7.90)">
-							<img src={coca} />
-							<div className="titulo">Suquinho gelado</div>
-							<div className="descricao">500ml</div>
-							<div className="preco">R$ 7,90</div>
-							<div className="check">
-								<ion-icon name="checkmark-circle"></ion-icon>
-							</div>
-						</div>
-					</div>
-				</div>
-
-				<div className="secao">
-					<div className="titulo">Por fim, sua sobremesa</div>
-					<div className="opcoes sobremesas">
-						<div className="opcao sobremesa-pudim" onClick="selecionarSobremesa('.sobremesa-pudim', 'Pudim', 7.90)">
-							<img src={pudim} />
-							<div className="titulo">Pudim</div>
-							<div className="descricao">Apenas um pudim</div>
-							<div className="preco">R$ 7,90</div>
-							<div className="check">
-								<ion-icon name="checkmark-circle"></ion-icon>
-							</div>
-						</div>
-
-						<div className="opcao sobremesa-mousse" onClick="selecionarSobremesa('.sobremesa-mousse', 'Mousse', 6.90)">
-							<img src={pudim} />
-							<div className="titulo">Mousse</div>
-							<div className="descricao">Cremoso, gostoso</div>
-							<div className="preco">R$ 6,90</div>
-							<div className="check">
-								<ion-icon name="checkmark-circle"></ion-icon>
-							</div>
-						</div>
-
-						<div className="opcao sobremesa-brownie" onClick="selecionarSobremesa('.sobremesa-brownie', 'Brownie', 4.90)">
-							<img src={pudim} />
-							<div className="titulo">Brownie</div>
-							<div className="descricao">É um bolinho</div>
-							<div className="preco">R$ 4,90</div>
-							<div className="check">
-								<ion-icon name="checkmark-circle"></ion-icon>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-			
 			<div className="footer">
 				<a href="#" className="fazer-pedido">
 					Selecione os 3 itens<br/>para fechar o pedido
@@ -152,3 +50,97 @@ export default function App(){
 		</>
 	);
 }
+
+
+const products = [
+	{
+		id: 1,
+		title: "Primeiro, seu prato",
+		options: [
+			{
+				id: 1,
+				meal: "Frango Yin Yang",
+				description: "Um pouco de batata, um pouco de salada",
+				price: "R$ 14,90",
+				image: frango,
+				quantity: 0
+			},
+			{
+				id: 2,
+				meal: "Carne Yin Yang",
+				description: "Um pouco de batata, um pouco de salada",
+				price: "R$ 16,90",
+				image: frango,
+				quantity: 0
+			},
+			{
+				id: 3,
+				meal: "Peixe Yin Yang",
+				description: "Um pouco de batata, um pouco de salada",
+				price: "R$ 17,90",
+				image: frango,
+				quantity: 0
+			}
+		]
+	},
+	{
+		id: 2,
+		title: "Agora, sua bebida",
+		options: [
+			{
+				id: 1,
+				meal: "Guaraná gelada",
+				description: "Lata 350ml",
+				price: "R$ 5,90",
+				image: coca,
+				quantity: 0
+			},
+			{
+				id: 2,
+				meal: "Coquinha gelada",
+				description: "Lata 350ml",
+				price: "R$ 6,90",
+				image: coca,
+				quantity: 0
+			},
+			{
+				id: 3,
+				meal: "Suquinho gelado",
+				description: "Lata 350ml",
+				price: "R$ 7,90",
+				image: coca,
+				quantity: 0
+			}
+		]
+	},
+	{
+		id: 3,
+		title: "Por fim, sua sobremesa",
+		options: [
+			{
+				id: 1,
+				meal: "Pudim",
+				description: "Apenas um pudim",
+				price: "R$ 4,90",
+				image: pudim,
+				quantity: 0
+			},
+			{
+				id: 2,
+				meal: "Mousse",
+				description: "Cremoso, gostoso",
+				price: "R$ 6,90",
+				image: pudim,
+				quantity: 0
+			},
+			{
+				id: 3,
+				meal: "Brownie",
+				description: "É um bolinho",
+				price: "R$ 7,90",
+				image: pudim,
+				quantity: 0
+			}
+		]
+	}
+];
