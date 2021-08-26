@@ -31,16 +31,17 @@ h3 {
   margin: 10px 15px 0 15px;
 }
 
-.lista-opcoes {
+.options-list {
   display: flex;
   flex-wrap: nowrap;
   padding: 15px;
   overflow: scroll;
 }
 
-.opcao {
+.option {
   flex-shrink: 0;
-  width: 150px;
+  width: 172px;
+  height: 216px;
   border-radius: 10px;
   box-shadow: 0 0 5px 3px rgba(0, 0, 0, 0.1);
   background: #FFF;
@@ -48,38 +49,53 @@ h3 {
   border: 5px solid transparent;
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   padding: 10px;
 }
 
-.opcao .container-qtd {
+.option .container-qtd {
   display: none;
 }
 
-.opcao.selecionada {
+.option.selecionada {
   border: 5px solid #00FF00;
 }
 
-.opcao.selecionada .container-qtd {
+.option.selecionada .container-qtd {
   display: block;
 }
 
-.opcao img {
+.option img {
   width: 100%;
   border-radius: 10px;
 }
 
-.opcao h4 {
+.titulo {
+  font-size: 16px;
+  font-weight: bold;
+  line-height: 19px;
+  color: #333333;
+}
+
+.option h4 {
   margin: 10px 0;
   font-weight: bold;
 }
 
-.opcao .descricao {
-  font-weight: 100;
+.option .description {
   margin-bottom: 10px;
-  font-size: 14px;
+  font-size: 15px;
+  line-height: 18px;
+  color: #A6A6A6;
 }
 
-.fechar-pedido {
+.price {
+  font-size: 16px;
+  line-height: 19px;
+  color: #000;
+}
+
+.confirm-order {
   position: fixed;
   width: 100%;
   left: 0;
@@ -89,7 +105,7 @@ h3 {
   box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.1);
 }
 
-.fechar-pedido button {
+.confirm-order button {
   display: block;
   width: 100%;
   padding: 10px 0;
@@ -102,16 +118,17 @@ h3 {
   cursor: pointer;
 }
 
-.fechar-pedido button.habilitado {
+.confirm-order button.able {
   background: #00FF00;
 }
 
-.container-preco {
+.container-price {
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 
-.container-preco button {
+.container-price button {
   background: none;
   border: none;
   font-weight: bold;
@@ -119,10 +136,10 @@ h3 {
   cursor: pointer;
 }
 
-.container-preco .btn-mais {
+.container-price .btn-plus {
   color: #00FF00;
 }
 
-.container-preco .btn-menos {
+.container-price .btn-less {
   color: #FF0000;
 }

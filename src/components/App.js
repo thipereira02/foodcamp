@@ -16,15 +16,15 @@ export default function App(){
 					<ul>
 						<li className="prato">
 							<div className="nome">Frango Yin Yang</div>
-							<div className="preco">14,90</div>
+							<div className="price">14,90</div>
 						</li>
 						<li className="bebida">
 							<div className="nome">Coquinha gelada</div>
-							<div className="preco">4,90</div>
+							<div className="price">4,90</div>
 						</li>
 						<li className="sobremesa">
 							<div className="nome">Pudim</div>
-							<div className="preco">7,90</div>
+							<div className="price">7,90</div>
 						</li>
 						<li className="total">
 							<div>Total</div>
@@ -61,7 +61,7 @@ const products = [
 				id: 1,
 				meal: "Frango Yin Yang",
 				description: "Um pouco de batata, um pouco de salada",
-				price: "R$ 14,90",
+				price: 14.90,
 				image: frango,
 				quantity: 0
 			},
@@ -69,7 +69,7 @@ const products = [
 				id: 2,
 				meal: "Carne Yin Yang",
 				description: "Um pouco de batata, um pouco de salada",
-				price: "R$ 16,90",
+				price: 16.90,
 				image: frango,
 				quantity: 0
 			},
@@ -77,7 +77,7 @@ const products = [
 				id: 3,
 				meal: "Peixe Yin Yang",
 				description: "Um pouco de batata, um pouco de salada",
-				price: "R$ 17,90",
+				price: 17.90,
 				image: frango,
 				quantity: 0
 			}
@@ -91,7 +91,7 @@ const products = [
 				id: 1,
 				meal: "Guaraná gelada",
 				description: "Lata 350ml",
-				price: "R$ 5,90",
+				price: 5.90,
 				image: coca,
 				quantity: 0
 			},
@@ -99,7 +99,7 @@ const products = [
 				id: 2,
 				meal: "Coquinha gelada",
 				description: "Lata 350ml",
-				price: "R$ 6,90",
+				price: 6.90,
 				image: coca,
 				quantity: 0
 			},
@@ -107,7 +107,7 @@ const products = [
 				id: 3,
 				meal: "Suquinho gelado",
 				description: "Lata 350ml",
-				price: "R$ 7,90",
+				price: 7.90,
 				image: coca,
 				quantity: 0
 			}
@@ -121,7 +121,7 @@ const products = [
 				id: 1,
 				meal: "Pudim",
 				description: "Apenas um pudim",
-				price: "R$ 4,90",
+				price: 4.90,
 				image: pudim,
 				quantity: 0
 			},
@@ -129,7 +129,7 @@ const products = [
 				id: 2,
 				meal: "Mousse",
 				description: "Cremoso, gostoso",
-				price: "R$ 6,90",
+				price: 6.90,
 				image: pudim,
 				quantity: 0
 			},
@@ -137,7 +137,7 @@ const products = [
 				id: 3,
 				meal: "Brownie",
 				description: "É um bolinho",
-				price: "R$ 7,90",
+				price: 7.90,
 				image: pudim,
 				quantity: 0
 			}

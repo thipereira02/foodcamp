@@ -10,10 +10,11 @@ export default function Categories(props) {
 	return (
 		<>
 			<h3>{title}</h3>
-
-			{options.map(o => (
-				<Option key={o.id} option={o}/>
-			))}
+			<div className="options-list">
+				{options.map(o => (
+					<Option key={o.id} option={o}/>
+				))}
+			</div>
 		</>
 	);	
 }

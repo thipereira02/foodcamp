@@ -3,18 +3,27 @@ import React from "react";
 
 export default function Option(props) {
 	const { option } = props;
-	const { description, image, meal, price } = option;
-	console.log(description,image,meal,price);
+	const { description, image, meal, price, quantity } = option;
+
+	function selectedOption() {
+		console.log("hahaha");
+	}
 
 	return (
-		<div className="opcoes pratos">
-			<div className="opcao prato-frango" onClick="selecionarPrato()">
-				<img src={image} />
-				<div className="titulo">{meal}</div>
-				<div className="descricao">{description}</div>
-				<div className="preco">{price}</div>
-				<div className="check">
-					<ion-icon name="checkmark-circle"></ion-icon>
+		<div className={quantity>0 ? "option selecionada" : "option"} onClick={selectedOption}>
+			<img src={image} />
+			<div className="titulo">{meal}</div>
+			<p className="description">{description}</p>
+			<div className="container-price">
+				<p className="price"> R$ {price.toFixed(2).replace(".",",")}</p>
+				<div className="container-price">
+					<button className="btn-less">
+                        -
+					</button>
+					<span>{quantity}</span>
+					<button className="btn-plus">
+                        +
+					</button>
 				</div>
 			</div>
 		</div>
