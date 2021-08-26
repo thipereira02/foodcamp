@@ -6,51 +6,19 @@ import pudim from "../assets/pudim.png";
 
 import Header from "./Header";
 import Categories from "./Categories";
+import ConfirmButton from "./ConfirmButton";
 
 export default function App(){
 	return (
 		<>
-			<div className="overlay escondido">
-				<div className="confirmar-pedido">
-					<div className="titulo">Confirme seu pedido</div>
-					<ul>
-						<li className="prato">
-							<div className="nome">Frango Yin Yang</div>
-							<div className="price">14,90</div>
-						</li>
-						<li className="bebida">
-							<div className="nome">Coquinha gelada</div>
-							<div className="price">4,90</div>
-						</li>
-						<li className="sobremesa">
-							<div className="nome">Pudim</div>
-							<div className="price">7,90</div>
-						</li>
-						<li className="total">
-							<div>Total</div>
-							<div>R$ 27,70</div>
-						</li>
-					</ul>
-					<button className="confirmar">Tudo certo, pode pedir!</button>
-					<button className="cancelar">Cancelar</button>
-				</div>
-			</div>
-
 			<Header />
-
 			{products.map(p => (
 				<Categories key={p.id} categories={p}/>
 			))}
-
-			<div className="footer">
-				<a href="#" className="fazer-pedido">
-					Selecione os 3 itens<br/>para fechar o pedido
-				</a>
-			</div>
+			<ConfirmButton />
 		</>
 	);
 }
-
 
 const products = [
 	{

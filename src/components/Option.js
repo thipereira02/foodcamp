@@ -10,9 +10,9 @@ export default function Option(props) {
 	}
 
 	return (
-		<div className={quantity>0 ? "option selecionada" : "option"} onClick={selectedOption}>
+		<div className={quantity>0 ? "option selected" : "option"} onClick={selectedOption}>
 			<img src={image} />
-			<div className="titulo">{meal}</div>
+			<div className="title">{meal}</div>
 			<p className="description">{description}</p>
 			<div className="container-price">
 				<p className="price"> R$ {price.toFixed(2).replace(".",",")}</p>

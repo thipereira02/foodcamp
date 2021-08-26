@@ -57,11 +57,11 @@ h3 {
   display: none;
 }
 
-.option.selecionada {
+.option.selected {
   border: 5px solid #00FF00;
 }
 
-.option.selecionada .container-qtd {
+.option.selected .container-qtd {
   display: block;
 }
 
@@ -70,7 +70,7 @@ h3 {
   border-radius: 10px;
 }
 
-.titulo {
+.title {
   font-size: 16px;
   font-weight: bold;
   line-height: 19px;
