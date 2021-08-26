@@ -12,7 +12,7 @@ export default function Option(props) {
 			<p className="description">{description}</p>
 			<div className="container-price">
 				<p className="price"> R$ {price.toFixed(2).replace(".",",")}</p>
-				<div className="container-price">
+				<div className="container-qtd">
 					<button className="btn-less" onClick={() => func(option, quantity-1)}>
                         -
 					</button>

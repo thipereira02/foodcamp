@@ -109,17 +109,18 @@ h3 {
 .confirm-order button {
   display: block;
   width: 100%;
+  height: 61px;
   padding: 10px 0;
   background: #CBCBCB;
   color: #FFF;
   border-radius: 30px;
   text-align: center;
-  border: 0;
-  font-size: 1.2em;
+  border: none;
+  font-size: 20px;
   cursor: pointer;
 }
 
-.confirm-order button.able {
+.confirm-order button.enable {
   background: #00FF00;
 }
 
