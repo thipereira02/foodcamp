@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 export default function confirmButton(props) {
 	const { categories } = props;
@@ -10,14 +11,20 @@ export default function confirmButton(props) {
 		});
 
 		if (check.length === categories.length) return true;
+
 		return false; 
 	}
 
 	return (
 		<div className="confirm-order">
-			<button className={enableButton ? "enable" : ""}>
-				{enableButton ? "Fechar pedido" : "Selecione os 3 itens para fechar o pedido"}
-			</button>
+			<Link to="/review">
+				<button 
+					className={enableButton ? "enable" : ""} 
+					disabled={!enableButton ? "disabled" : ""} 
+				>
+					{enableButton ? "Fechar pedido" : "Selecione os 3 itens para fechar o pedido"}
+				</button>
+			</Link>
 		</div>
 	);
 }

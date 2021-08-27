@@ -121,7 +121,8 @@ h3 {
 }
 
 .confirm-order button.enable {
-  background: #00FF00;
+  background: #32B72F;
+  ;
 }
 
 .container-price {
@@ -144,4 +145,35 @@ h3 {
 
 .container-price .btn-less {
   color: #FF0000;
+}
+
+.container-order{
+  width: 93%;
+  height: 201px;
+  background: #FFFFFF;
+  box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.15);
+  border-radius: 9px;
+  margin: 33px auto 0 auto;
+}
+
+.confirm-button{
+  margin: 33px auto 15px auto;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #50D074;
+  width: 80%;
+  height: 52px;
+  border-radius: 100px;
+  font-size: 22px;
+  color: #FFF;
+}
+
+.cancel{
+  font-weight: bold;
+  font-size: 20px;  
+  color: #777;
+  display: flex;
+  justify-content: center;
 }

@@ -1,26 +1,24 @@
+import { BrowserRouter, Route, Switch } from "react-router-dom";
 import React, { useState } from "react";
 
-import { products } from "./ProductsList";
+import { products } from "../utils/ProductsList";
 
-import Header from "./Header";
-import Categories from "./Categories";
-import ConfirmButton from "./ConfirmButton";
+import HomePage from "../pages/HomePage";
+import ReviewPage from "../pages/ReviewPage";
 
-export default function App(){
+export default function App() {
 	const [categories, setCategories] = useState(products);
 
-	function alterQuantity(option, value) {
-		option.quantity = value;
-		setCategories([...categories]);
-	}
-
 	return (
-		<>
-			<Header />
-			{categories.map(c => (
-				<Categories key={c.id} categories={c} func={alterQuantity}/>
-			))}
-			<ConfirmButton categories={categories}/>
-		</>
+		<BrowserRouter>
+			<Switch>
+				<Route path="/" exact>
+					<HomePage categories={categories} setCategories={setCategories} />
+				</Route>
+				<Route path="/review" exact>
+					<ReviewPage categories={categories} />
+				</Route>
+			</Switch>
+		</BrowserRouter>
 	);
 }
