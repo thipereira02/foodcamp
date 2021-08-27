@@ -7,7 +7,6 @@ import ConfirmButton from "../components/ConfirmButton";
 
 export default function HomePage(props){
 	const {categories, setCategories} = props;
-	console.log(categories);
 
 	function alterQuantity(option, value) {
 		option.quantity = value;
