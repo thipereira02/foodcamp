@@ -7,7 +7,7 @@ export default function Option(props) {
 
 	return (
 		<div className={quantity>0 ? "option selected" : "option"} onClick={() => quantity===0 && func(option, 1)}>
-			<img src={image} />
+			<img src={image} alt={description}/>
 			<div className="title">{meal}</div>
 			<p className="description">{description}</p>
 			<div className="container-price">

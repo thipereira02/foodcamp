@@ -1,6 +1,15 @@
 import frango from "../assets/frango_yin_yang.png";
+import estrogonofe from "../assets/estrogonofe-de-carne.jpg";
+import bife from "../assets/bife-com-batata.jpg";
+import espaguete from "../assets/espaguete-a-bolonhesa.jpg";
 import coca from "../assets/coquinha_gelada.png";
+import suco from "../assets/suco.jpg";
+import cerveja from "../assets/cerveja.png";
+import agua from "../assets/agua.jpg";
 import pudim from "../assets/pudim.png";
+import pave from "../assets/pave.jpg";
+import mousse from "../assets/mousse-de-chocolate.jpg";
+import torta from "../assets/torta-alema.jpg";
 
 export const products = [
 	{
@@ -20,19 +29,28 @@ export const products = [
 			{
 				id: 2,
 				key: 2, 
-				meal: "Carne Yin Yang",
-				description: "Um pouco de batata, um pouco de salada",
+				meal: "Estrogonofe",
+				description: "Carne com molho, arroz e batata",
 				price: 16.90,
-				image: frango,
+				image: estrogonofe,
 				quantity: 0
 			},
 			{
 				id: 3,
 				key: 3, 
-				meal: "Peixe Yin Yang",
-				description: "Um pouco de batata, um pouco de salada",
+				meal: "Bife com batata",
+				description: "Bife com batatas e arroz",
 				price: 17.90,
-				image: frango,
+				image: bife,
+				quantity: 0
+			},
+			{
+				id: 4,
+				key: 4, 
+				meal: "Espaguete",
+				description: "Macarrão com molho à bolonhesa",
+				price: 19.90,
+				image: espaguete,
 				quantity: 0
 			}
 		]
@@ -44,29 +62,38 @@ export const products = [
 		options: [
 			{
 				id: 1,
-				key: 4, 
-				meal: "Guaraná gelada",
-				description: "Lata 350ml",
-				price: 5.90,
-				image: coca,
+				key: 5, 
+				meal: "Água",
+				description: "Garrafa 500ml",
+				price: 3.90,
+				image: agua,
 				quantity: 0
 			},
 			{
 				id: 2,
-				key: 5, 
-				meal: "Coquinha gelada",
+				key: 6, 
+				meal: "Refrigerante",
 				description: "Lata 350ml",
-				price: 6.90,
+				price: 4.90,
 				image: coca,
 				quantity: 0
 			},
 			{
 				id: 3,
-				key: 6, 
-				meal: "Suquinho gelado",
+				key: 7, 
+				meal: "Suco",
+				description: "Copo 300ml",
+				price: 5.90,
+				image: suco,
+				quantity: 0
+			},
+			{
+				id: 4,
+				key: 8, 
+				meal: "Cerveja",
 				description: "Lata 350ml",
-				price: 7.90,
-				image: coca,
+				price: 6.90,
+				image: cerveja,
 				quantity: 0
 			}
 		]
@@ -78,29 +105,38 @@ export const products = [
 		options: [
 			{
 				id: 1,
-				key: 7, 
+				key: 9, 
 				meal: "Pudim",
-				description: "Apenas um pudim",
-				price: 4.90,
+				description: "Pudim de leite condensado",
+				price: 5.90,
 				image: pudim,
 				quantity: 0
 			},
 			{
 				id: 2,
-				key: 8, 
-				meal: "Mousse",
-				description: "Cremoso, gostoso",
+				key: 10, 
+				meal: "Pavê",
+				description: "Torta com base de biscoitos",
 				price: 6.90,
-				image: pudim,
+				image: pave,
 				quantity: 0
 			},
 			{
 				id: 3,
-				key: 9, 
-				meal: "Brownie",
-				description: "É um bolinho",
+				key: 11, 
+				meal: "Mousse",
+				description: "Sobremesa leve e aerada",
 				price: 7.90,
-				image: pudim,
+				image: mousse,
+				quantity: 0
+			},
+			{
+				id: 3,
+				key: 12, 
+				meal: "Torta Alemã",
+				description: "Torta com biscoitos e chocolate",
+				price: 8.90,
+				image: torta,
 				quantity: 0
 			}
 		]
