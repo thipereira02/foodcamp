@@ -20,7 +20,7 @@ export const products = [
 			{
 				id: 1,
 				key: 1, 
-				meal: "Frango Yin Yang",
+				meal: "Frango",
 				description: "Um pouco de batata, um pouco de salada",
 				price: 14.90,
 				image: frango,
@@ -38,7 +38,7 @@ export const products = [
 			{
 				id: 3,
 				key: 3, 
-				meal: "Bife com batata",
+				meal: "Bife",
 				description: "Bife com batatas e arroz",
 				price: 17.90,
 				image: bife,
