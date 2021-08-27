@@ -6,8 +6,7 @@ import Header from "../components/common/Header";
 
 import OrderByWhatsapp from "../utils/OrderByWhatsapp";
 
-export default function ReviewPage(props) {
-	const { categories } = props;
+export default function ReviewPage({ categories }) {
 	const order = [];
 	const { message, total } = OrderByWhatsapp(categories);
 	const text = encodeURIComponent(message);

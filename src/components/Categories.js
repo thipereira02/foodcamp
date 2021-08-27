@@ -3,8 +3,7 @@ import React from "react";
 
 import Option from "./Option";
 
-export default function Categories(props) {
-	const { categories, func } = props;
+export default function Categories({ categories, func }) {
 	const { title, options } = categories;
     
 	return (

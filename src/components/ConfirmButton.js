@@ -1,8 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-export default function confirmButton(props) {
-	const { categories } = props;
+export default function confirmButton({ categories }) {
 	const enableButton = verifyQuantities(categories);
 	
 	function verifyQuantities(categories){

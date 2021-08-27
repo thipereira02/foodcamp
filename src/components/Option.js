@@ -1,8 +1,7 @@
 /* eslint-disable react/prop-types */
 import React from "react";
 
-export default function Option(props) {
-	const { option, func } = props;
+export default function Option({ option, func }) {
 	const { description, image, meal, price, quantity } = option;
 
 	return (
