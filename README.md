@@ -2,7 +2,7 @@
 
 The app allows you to easily choose your combo (dish, drink and dessert), then send the order via WhatsApp directly to the restaurant.
 
-<img align="center" src="./public/assets/driveneats.gif" alt="GIF" />
+<img position="center" src="./public/assets/driveneats.gif" alt="GIF" />
 
 Try it out now at https://driven-eats.vercel.app/
 
