@@ -2,10 +2,16 @@ import React from "react";
 
 export default function confirmButton(props) {
 	const { categories } = props;
-	console.log(categories);
+	const enableButton = verifyQuantities(categories);
 	
-	const enableButton = true;
-	
+	function verifyQuantities(categories){
+		const check = categories.filter(c => {
+			return c.options.find(o => o.quantity > 0);
+		});
+
+		if (check.length === categories.length) return true;
+		return false; 
+	}
 
 	return (
 		<div className="confirm-order">
