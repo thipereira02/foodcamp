@@ -5,13 +5,12 @@ import { Link } from "react-router-dom";
 import Header from "../components/common/Header";
 
 import OrderByWhatsapp from "../utils/OrderByWhatsapp";
-import CalculateOrderPrice from "../utils/CalculateOrderPrice";
 
 export default function ReviewPage(props) {
 	const { categories } = props;
 	const order = [];
-	const message = encodeURIComponent(OrderByWhatsapp(categories));
-	const total = CalculateOrderPrice(categories);
+	const { message, total } = OrderByWhatsapp(categories);
+	const text = encodeURIComponent(message);
 
 	categories.forEach(c => {
 		c.options.forEach(o => {
@@ -39,7 +38,7 @@ export default function ReviewPage(props) {
 					<h4>R$ {total.toFixed(2).replace(".",",")}</h4>
 				</div>
 			</div>
-			<a href={`https://wa.me/5581993562246?text=${message}`} target="_blank" rel="noreferrer">
+			<a href={`https://wa.me/5581993562246?text=${text}`} target="_blank" rel="noreferrer">
 				<button className="confirm-button">
 					Tudo certo, pode pedir!
 				</button>

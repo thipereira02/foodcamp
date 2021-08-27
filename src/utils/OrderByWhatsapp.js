@@ -11,5 +11,5 @@ export default function OrderByWhatsapp(categories) {
 
 	message += `Total: R$ ${total.toFixed(2)}`;
 
-	return message;
+	return {message, total};
 }
