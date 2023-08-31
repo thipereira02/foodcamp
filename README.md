@@ -1,4 +1,4 @@
-# DrivenEats
+# FoodCamp
 
 The app allows you to easily choose your combo (dish, drink and dessert), then send the order via WhatsApp directly to the restaurant.
 
